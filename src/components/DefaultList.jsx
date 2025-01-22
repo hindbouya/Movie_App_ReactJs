@@ -4,20 +4,20 @@ import { FaHeart, FaRegHeart, FaInfoCircle } from "react-icons/fa";
 import "../App.css";
 
 const DefaultList = ({ films, favoris, toggleFavori }) => {
-  // Ajouter un identifiant unique pour les films locaux
+  
   const filmsWithIds = films.map((film, index) => ({
     ...film,
     source: "local",
     id: `manual-${index}`,
   }));
 
-  // Ajouter un marqueur source pour les films de l'API
+  
   const moviesWithSource = films.map((movie) => ({
     ...movie,
     source: "api",
   }));
 
-  // Combinez les films de l'API et les films locaux
+ 
   const allMovies = [...moviesWithSource, ...filmsWithIds];
 
   return (

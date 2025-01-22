@@ -1,5 +1,5 @@
 import React from "react";
- // Assurez-vous d'importer le CSS
+
 
 const Movie = (props) => {
   const { movies } = props;

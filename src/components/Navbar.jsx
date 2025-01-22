@@ -9,13 +9,13 @@ const Navbar = ({ favoris }) => {
 
   const numberOfFavoris = Array.isArray(favoris) ? favoris.length : 0;
 
-  // Fonction pour basculer l'état du menu hamburger
+  
   const toggleMenu = () => {
     setIsMenuActive(!isMenuActive);
   };
 
   const handleScroll = () => {
-    const isScrolled = window.scrollY > 50; // Ajustez la valeur selon votre besoin
+    const isScrolled = window.scrollY > 50; 
     setScrolled(isScrolled);
   };
 

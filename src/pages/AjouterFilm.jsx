@@ -16,7 +16,7 @@ const AjouterFilm = ({ ajouterFilm, localFilms }) => {
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        setImage(reader.result); // La chaîne Base64
+        setImage(reader.result); 
       };
       reader.readAsDataURL(file);
     }

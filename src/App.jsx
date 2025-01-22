@@ -23,7 +23,7 @@ function App() {
     async function fetchMovies() {
       try {
         const response = await fetch(
-          "https://api.themoviedb.org/3/discover/movie?api_key=f43ec82a5f24fe6190891894b7436c7a",
+          "https://api.themoviedb.org/3/discover/movie?api_key=ebec3422abdc9fcf333294ef0fbda997",
           {
             headers: {
               "Content-Type": "application/json",

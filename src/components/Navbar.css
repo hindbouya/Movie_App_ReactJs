@@ -1,0 +1,139 @@
+/* Barre de navigation */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 15px 30px;
+  background-color: transparent;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+/* Barre de navigation container */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Logo */
+.navbar-logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.navbar-logo:hover {
+  color: #f39c12; /* Accent doré sur le survol */
+}
+
+/* Hamburger Menu (mobile) */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 30px;
+  width: 30px;
+  background: transparent;
+  border: none;
+}
+
+.hamburger .line {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+/* Menu des éléments de la navbar */
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  margin: 0 20px;
+}
+
+.navbar-link {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-link:hover {
+  background-color:  rgb(0, 10, 44);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Menu hamburger actif (mobile) */
+.navbar-menu.active {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-item {
+  margin: 10px 0;
+}
+
+/* Animation du hamburger en open (transformation des lignes) */
+.hamburger.active .line:nth-child(1) {
+  transform: rotate(45deg);
+  position: relative;
+  top: 5px;
+}
+
+.hamburger.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+  transform: rotate(-45deg);
+  position: relative;
+  top: -5px;
+}
+
+/* Media Queries pour mobile */
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+}
+
+/* Barre de navigation scrolled */
+.navbar-scrolled {
+  background-color: rgb(0, 10, 44); /* Fond noir avec opacité */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée */
+}
